@@ -1,0 +1,170 @@
+type EmailList @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String!
+  email: String!
+  phoneNumber: Int!
+}
+
+"""
+USER: Trip messages
+TRIP: Trip messages
+LISTING: Report listing
+FEEDBACK: Feedback for onego app
+REVIEW: Review trip. Have to add optional start rating system later
+ACCIDENT: User Trip ID for againstID field
+"""
+type ApiKeys {
+  stripeKey: String!
+  googleKey: String!
+}
+type Mutation {
+  createPaymentIntent(amount: Int!): String!
+    @function(name: "oneGoCreateStripePaymentIntent-${env}")
+}
+type Query {
+  getAPIKeys(get: Boolean!): ApiKeys! @function(name: "oneGoGetAPIkeys-${env}")
+}
+
+enum Against {
+  USER
+  TRIP
+  LISTING
+  FEEDBACK
+  REVIEW
+  ACCIDENT
+}
+
+type ReportReview @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  message: String!
+  against: Against!
+  againstID: ID!
+  userID: ID! @index(name: "byUser")
+
+  rating: Int
+  pictures: [String]
+}
+
+type Message @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  message: String!
+  userID: ID! @index(name: "byUser")
+  tripID: ID! @index(name: "byTrip")
+}
+
+type PrepPictures {
+  pictures: [String!]!
+  odometerReading: Float!
+  damageDescription: String
+}
+
+enum FuelType {
+  PREMIUM
+  REGULAR
+  ETHANOL
+  ELECTRIC
+  DIESEL
+}
+
+enum VehicleType {
+  SPORTS
+  LUXURY
+  SUV
+  SEDAN
+  UTE
+  VAN
+}
+
+type VehicleInfo {
+  type: VehicleType!
+  year: Int!
+  make: String!
+  model: String!
+  seats: Int!
+  fuel: FuelType!
+  isElectric: Boolean!
+  isDiesel: Boolean!
+  isManual: Boolean!
+}
+
+type Trip
+  @model
+  @auth(
+    rules: [
+      { allow: public }
+      { allow: private, operations: [create, read, update] }
+    ]
+  ) {
+  id: ID!
+  startDate: String!
+  endDate: String!
+  totalPrice: Float!
+  currentLatitude: Float!
+  currentLongitude: Float!
+  hostACCEPTED: Boolean!
+  hostCleaned: Boolean!
+  hostUploadedBefore: Boolean!
+  hostGavekeys: Boolean!
+  userRecievedkeys: Boolean!
+  userUploadedBefore: Boolean!
+  userFinishedUsingCar: Boolean!
+  userCleaned: Boolean!
+  userUploadedAfter: Boolean!
+  userGaveBackkeys: Boolean!
+  hostRecievedBackkeys: Boolean!
+  hostUploadedAfter: Boolean!
+  userENDED: Boolean!
+  hostENDED: Boolean!
+  listingID: ID!
+  hostID: ID!
+  userID: ID!
+
+  listingPicture: String!
+  userBeforePics: PrepPictures!
+  userAfterPics: PrepPictures!
+  hostBeforePics: PrepPictures!
+  hostAfterPics: PrepPictures!
+
+  Messages: [Message] @hasMany(indexName: "byTrip", fields: ["id"])
+}
+
+type Listing
+  @model
+  @auth(
+    rules: [
+      { allow: public }
+      { allow: private, operations: [create, read, update] }
+    ]
+  ) {
+  isAvailable: Boolean!
+  isVarified: Boolean!
+  id: ID!
+  pricePerDay: Float!
+  picture: String!
+  originArea: String!
+  originLatitude: Float!
+  originLongitude: Float!
+  description: String
+  info: VehicleInfo!
+  numberOfTrips: Int!
+  licencePlate: String!
+  userID: ID! @index(name: "byUser")
+}
+
+type User
+  @model
+  @auth(
+    rules: [
+      { allow: public }
+      { allow: private, operations: [create, read, update] }
+    ]
+  ) {
+  id: ID!
+  name: String!
+  phone: String!
+  picture: String!
+  isAhost: Boolean
+  Listings: [Listing] @hasMany(indexName: "byUser", fields: ["id"])
+  isVarified: Boolean
+  Messages: [Message] @hasMany(indexName: "byUser", fields: ["id"])
+}

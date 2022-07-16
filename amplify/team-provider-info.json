@@ -1,0 +1,49 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-onegoaustralia-staging-183251-authRole",
+      "UnauthRoleArn": "arn:aws:iam::599797655192:role/amplify-onegoaustralia-staging-183251-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::599797655192:role/amplify-onegoaustralia-staging-183251-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
+      "UnauthRoleName": "amplify-onegoaustralia-staging-183251-unauthRole",
+      "StackName": "amplify-onegoaustralia-staging-183251",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:599797655192:stack/amplify-onegoaustralia-staging-183251/9fe84dc0-bdb3-11ec-b8a6-06d46eaafdd4",
+      "AmplifyAppId": "d3cfxktyteiq7n",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-onegoaustralia-staging-183251-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "oneGoAustralia": {}
+      },
+      "function": {
+        "oneGoAustraliaPostConfirmation": {
+          "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
+          "s3Key": "amplify-builds/oneGoAustraliaPostConfirmation-69566f5975666939386b-build.zip"
+        },
+        "S3Trigger9b823b10": {
+          "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
+          "s3Key": "amplify-builds/S3Trigger9b823b10-705634317864762b3559-build.zip"
+        },
+        "oneGoCreateStripePaymentIntent": {
+          "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
+          "s3Key": "amplify-builds/oneGoCreateStripePaymentIntent-4b4a4c344a514b5a4365-build.zip",
+          "secretsPathAmplifyAppId": "d3cfxktyteiq7n"
+        },
+        "oneGoAustraliaStripeWebhookLamda": {
+          "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
+          "s3Key": "amplify-builds/oneGoAustraliaStripeWebhookLamda-55314b5975783775786a-build.zip"
+        },
+        "oneGoAustraliaStripeVarification": {
+          "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
+          "s3Key": "amplify-builds/oneGoAustraliaStripeVarification-2b2f6f76663253457177-build.zip",
+          "secretsPathAmplifyAppId": "d3cfxktyteiq7n"
+        },
+        "oneGoGetAPIkeys": {
+          "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
+          "s3Key": "amplify-builds/oneGoGetAPIkeys-327a76597a5a3047544e-build.zip"
+        }
+      }
+    }
+  }
+}

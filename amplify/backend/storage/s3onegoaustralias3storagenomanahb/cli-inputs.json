@@ -1,0 +1,15 @@
+{
+  "resourceName": "s3onegoaustralias3storagenomanahb",
+  "bucketName": "onegoaustralia-s3storage-noman-ahb",
+  "policyUUID": "2d990d83",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

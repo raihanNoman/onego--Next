@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "auth": {
+      "oneGoAustralia": [
+        "create",
+        "read",
+        "update"
+      ]
+    },
+    "api": {
+      "oneGoAustralia": [
+        "Query",
+        "Mutation"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "secretNames": [
+    "STRIPESECRET"
+  ]
+}

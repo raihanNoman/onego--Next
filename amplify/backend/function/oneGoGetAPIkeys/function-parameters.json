@@ -1,0 +1,13 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "googlekey",
+      "environmentVariableName": "googlekey"
+    },
+    {
+      "cloudFormationParameterName": "stripekey",
+      "environmentVariableName": "stripekey"
+    }
+  ]
+}

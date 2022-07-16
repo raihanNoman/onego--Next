@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "oneGoAustralia",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authoneGoAustralia",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

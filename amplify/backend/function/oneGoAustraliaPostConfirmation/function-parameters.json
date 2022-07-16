@@ -1,0 +1,23 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "oneGoAustralia",
+  "functionName": "oneGoAustraliaPostConfirmation",
+  "resourceName": "oneGoAustraliaPostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "/snapshot/repo/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "oneGoAustraliaPostConfirmation",
+  "skipEdit": true,
+  "enableCors": false,
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "usertable",
+      "environmentVariableName": "USERTABLE"
+    }
+  ]
+}
