@@ -14,7 +14,10 @@
     },
     "categories": {
       "auth": {
-        "oneGoAustralia": {}
+        "oneGoAustralia": {
+          "facebookAppId": "289626626539858",
+          "googleClientId": "846666040033-jopem7f7q44slpj2mgt46mnc09nf256b.apps.googleusercontent.com"
+        }
       },
       "function": {
         "oneGoAustraliaPostConfirmation": {
