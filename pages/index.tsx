@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { useRef } from "react";
 import Footer from "../components/Footer";
-import AppHead from "../layout/AppHead";
+import AppHead from "../components/AppHead";
 import { Page, Screen } from "../styles/Main";
 import { Amplify, DataStore } from "aws-amplify";
 import awsConfig from "../src/aws-exports";

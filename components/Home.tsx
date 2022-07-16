@@ -35,6 +35,8 @@ export function Form() {
     }
   };
 
+  // add
+
   return (
     <FormComponent onSubmit={handleSubmit(onSubmit)}>
       <h2>Got a car? Rent it out and earn money</h2>

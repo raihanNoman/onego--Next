@@ -4,7 +4,7 @@ import Head from "next/head";
 export default function AppHead() {
   return (
     <Head>
-      <title>meCast - Let your imagination run wild</title>
+      <title>One Go - Ride solutions for Australia</title>
       <meta
         name="description"
         content="The place to let your imagination run wild" // serch engine // add to all pages
