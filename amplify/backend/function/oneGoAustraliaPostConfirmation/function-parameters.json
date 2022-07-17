@@ -18,6 +18,10 @@
     {
       "cloudFormationParameterName": "usertable",
       "environmentVariableName": "USERTABLE"
+    },
+    {
+      "cloudFormationParameterName": "usertable",
+      "environmentVariableName": "USERTABLE"
     }
   ]
 }

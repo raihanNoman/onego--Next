@@ -8,6 +8,14 @@
     {
       "cloudFormationParameterName": "stripekey",
       "environmentVariableName": "stripekey"
+    },
+    {
+      "cloudFormationParameterName": "googlekey",
+      "environmentVariableName": "googlekey"
+    },
+    {
+      "cloudFormationParameterName": "stripekey",
+      "environmentVariableName": "stripekey"
     }
   ]
 }

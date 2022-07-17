@@ -22,7 +22,8 @@
       "function": {
         "oneGoAustraliaPostConfirmation": {
           "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
-          "s3Key": "amplify-builds/oneGoAustraliaPostConfirmation-69566f5975666939386b-build.zip"
+          "s3Key": "amplify-builds/oneGoAustraliaPostConfirmation-69566f5975666939386b-build.zip",
+          "usertable": "User-gzxtmxv36je47n3wpvuezih57u-staging"
         },
         "S3Trigger9b823b10": {
           "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
@@ -44,7 +45,9 @@
         },
         "oneGoGetAPIkeys": {
           "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
-          "s3Key": "amplify-builds/oneGoGetAPIkeys-327a76597a5a3047544e-build.zip"
+          "s3Key": "amplify-builds/oneGoGetAPIkeys-327a76597a5a3047544e-build.zip",
+          "googlekey": "AIzaSyDGWa0xgNav2Yau5CRJdhXUoLPydrg6rUY",
+          "stripekey": "pk_test_51JEoKMGPgvI1pRpvAS1xi4Am0IGgbCrH3gPNHJ10ZD936LZ4WFGxv5mGSIimLzMmXDbhHs5zXFm4879PDglV452R00iNLxqMxs"
         }
       }
     }
