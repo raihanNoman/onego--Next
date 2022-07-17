@@ -132,29 +132,6 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "oneGoAustraliaStripeVarification": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda",
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "oneGoAustralia",
-          "attributes": [
-            "UserPoolId"
-          ]
-        },
-        {
-          "category": "api",
-          "resourceName": "oneGoAustralia",
-          "attributes": [
-            "GraphQLAPIIdOutput",
-            "GraphQLAPIEndpointOutput",
-            "GraphQLAPIKeyOutput"
-          ]
-        }
-      ]
-    },
     "oneGoGetAPIkeys": {
       "build": true,
       "providerPlugin": "awscloudformation",

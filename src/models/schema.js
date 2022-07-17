@@ -196,15 +196,15 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "userID": {
-                    "name": "userID",
+                "tripID": {
+                    "name": "tripID",
                     "isArray": false,
                     "type": "ID",
                     "isRequired": true,
                     "attributes": []
                 },
-                "tripID": {
-                    "name": "tripID",
+                "userID": {
+                    "name": "userID",
                     "isArray": false,
                     "type": "ID",
                     "isRequired": true,
@@ -240,15 +240,6 @@ export const schema = {
                         "name": "byUser",
                         "fields": [
                             "userID"
-                        ]
-                    }
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byTrip",
-                        "fields": [
-                            "tripID"
                         ]
                     }
                 },
@@ -476,20 +467,6 @@ export const schema = {
                     },
                     "isRequired": true,
                     "attributes": []
-                },
-                "Messages": {
-                    "name": "Messages",
-                    "isArray": true,
-                    "type": {
-                        "model": "Message"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "tripID"
-                    }
                 },
                 "createdAt": {
                     "name": "createdAt",
@@ -974,5 +951,5 @@ export const schema = {
             }
         }
     },
-    "version": "e7f800987af16b092457b6c67d85c834"
+    "version": "e3afddfb98282d7a86e40210c9b2894d"
 };

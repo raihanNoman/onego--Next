@@ -48,8 +48,8 @@ type ReportReview @model @auth(rules: [{ allow: public }]) {
 type Message @model @auth(rules: [{ allow: public }]) {
   id: ID!
   message: String!
+  tripID: ID!
   userID: ID! @index(name: "byUser")
-  tripID: ID! @index(name: "byTrip")
 }
 
 type PrepPictures {
@@ -124,8 +124,6 @@ type Trip
   userAfterPics: PrepPictures!
   hostBeforePics: PrepPictures!
   hostAfterPics: PrepPictures!
-
-  Messages: [Message] @hasMany(indexName: "byTrip", fields: ["id"])
 }
 
 type Listing

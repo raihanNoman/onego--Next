@@ -104,8 +104,8 @@ export declare class ReportReview {
 export declare class Message {
   readonly id: string;
   readonly message: string;
-  readonly userID: string;
   readonly tripID: string;
+  readonly userID: string;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Message, MessageMetaData>);
@@ -141,7 +141,6 @@ export declare class Trip {
   readonly userAfterPics: PrepPictures;
   readonly hostBeforePics: PrepPictures;
   readonly hostAfterPics: PrepPictures;
-  readonly Messages?: (Message | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Trip, TripMetaData>);

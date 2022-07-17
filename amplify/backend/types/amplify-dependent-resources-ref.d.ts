@@ -56,12 +56,6 @@ export type AmplifyDependentResourcesAttributes = {
             "Region": "string",
             "LambdaExecutionRole": "string"
         },
-        "oneGoAustraliaStripeVarification": {
-            "Name": "string",
-            "Arn": "string",
-            "Region": "string",
-            "LambdaExecutionRole": "string"
-        },
         "oneGoGetAPIkeys": {
             "Name": "string",
             "Arn": "string",
