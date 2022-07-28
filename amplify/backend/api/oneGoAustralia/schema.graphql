@@ -3,6 +3,7 @@ type EmailList @model @auth(rules: [{ allow: public }]) {
   name: String!
   email: String!
   phoneNumber: Int!
+  numCars: Int!
 }
 
 """
@@ -48,6 +49,7 @@ type ReportReview @model @auth(rules: [{ allow: public }]) {
 type Message @model @auth(rules: [{ allow: public }]) {
   id: ID!
   message: String!
+  byHost: Boolean!
   tripID: ID!
   userID: ID! @index(name: "byUser")
 }

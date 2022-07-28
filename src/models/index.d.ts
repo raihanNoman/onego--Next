@@ -81,6 +81,7 @@ export declare class EmailList {
   readonly name: string;
   readonly email: string;
   readonly phoneNumber: number;
+  readonly numCars: number;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<EmailList, EmailListMetaData>);
@@ -104,6 +105,7 @@ export declare class ReportReview {
 export declare class Message {
   readonly id: string;
   readonly message: string;
+  readonly byHost: boolean;
   readonly tripID: string;
   readonly userID: string;
   readonly createdAt?: string | null;

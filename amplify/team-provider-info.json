@@ -22,16 +22,16 @@
       "function": {
         "oneGoAustraliaPostConfirmation": {
           "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
-          "s3Key": "amplify-builds/oneGoAustraliaPostConfirmation-69566f5975666939386b-build.zip",
+          "s3Key": "amplify-builds/oneGoAustraliaPostConfirmation-4465332b762f3743744b-build.zip",
           "usertable": "User-gzxtmxv36je47n3wpvuezih57u-staging"
         },
         "S3Trigger9b823b10": {
           "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
-          "s3Key": "amplify-builds/S3Trigger9b823b10-705634317864762b3559-build.zip"
+          "s3Key": "amplify-builds/S3Trigger9b823b10-30476a66636c32434465-build.zip"
         },
         "oneGoCreateStripePaymentIntent": {
           "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
-          "s3Key": "amplify-builds/oneGoCreateStripePaymentIntent-4b4a4c344a514b5a4365-build.zip",
+          "s3Key": "amplify-builds/oneGoCreateStripePaymentIntent-6e63544b4b446a7a6732-build.zip",
           "secretsPathAmplifyAppId": "d3cfxktyteiq7n"
         },
         "oneGoAustraliaStripeWebhookLamda": {
@@ -45,7 +45,7 @@
         },
         "oneGoGetAPIkeys": {
           "deploymentBucketName": "amplify-onegoaustralia-staging-183251-deployment",
-          "s3Key": "amplify-builds/oneGoGetAPIkeys-327a76597a5a3047544e-build.zip",
+          "s3Key": "amplify-builds/oneGoGetAPIkeys-425a4e76504c65544e78-build.zip",
           "googlekey": "AIzaSyDGWa0xgNav2Yau5CRJdhXUoLPydrg6rUY",
           "stripekey": "pk_test_51JEoKMGPgvI1pRpvAS1xi4Am0IGgbCrH3gPNHJ10ZD936LZ4WFGxv5mGSIimLzMmXDbhHs5zXFm4879PDglV452R00iNLxqMxs"
         }

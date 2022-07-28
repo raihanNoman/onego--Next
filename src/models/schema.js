@@ -31,6 +31,13 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
+                "numCars": {
+                    "name": "numCars",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -193,6 +200,13 @@ export const schema = {
                     "name": "message",
                     "isArray": false,
                     "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "byHost": {
+                    "name": "byHost",
+                    "isArray": false,
+                    "type": "Boolean",
                     "isRequired": true,
                     "attributes": []
                 },
@@ -951,5 +965,5 @@ export const schema = {
             }
         }
     },
-    "version": "e3afddfb98282d7a86e40210c9b2894d"
+    "version": "9dd5f80ebe55fd3ed4fb4c09e92db30d"
 };

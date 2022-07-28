@@ -1,11 +1,14 @@
+import { NextPage } from "next";
 import React from "react";
-import Logo from "../../components/Logo";
-import { Page, Screen } from "../../styles/Main";
+import Page from "../../components/app/PageStyles";
+import Logo from "../../components/app/Logo";
+import AppFooter from "../../components/app/Footer";
+import styled from "styled-components";
 
-export default function index() {
+const Policy: NextPage = () => {
   return (
-    <Page>
-      <Screen>
+    <Page.Page>
+      <PolicyPage>
         <Logo title="Privacy policy" size={300} />
 
         <p>
@@ -23,10 +26,11 @@ export default function index() {
           of information generally collected by us include your name, date of
           birth, residential and/or postal address, telephone number, email
           address, payment details, details of your current driver licence,
-          details of your driving history, your employer’s name and position and
-          contact details for who to contact in the event of an emergency. We
-          may also request additional documentation to assist in verifying your
-          identity or eligibility for a particular membership plan or promotion.
+          details of your driving history, your employer&#39;s name and position
+          and contact details for who to contact in the event of an emergency.
+          We may also request additional documentation to assist in verifying
+          your identity or eligibility for a particular membership plan or
+          promotion.
         </p>
         <h2>How we collect your personal information</h2>
         <p>
@@ -225,7 +229,7 @@ export default function index() {
           you while you are browsing the Internet. You may opt of Google
           Analytics by visiting the Google Analytics Opt-out Browser Add-on
           webpage. This can be done via the “How Google uses data when you use
-          our partners’ sites or apps” webpage, located at
+          our partners&#39; sites or apps” webpage, located at
           www.google.com/policies/privacy/partners/ (or any other URL Google may
           provide from time to time).
         </p>
@@ -262,7 +266,26 @@ export default function index() {
           refer your complaint to the Office of the Australian Information
           Commissioner (OAIC).
         </p>
-      </Screen>
-    </Page>
+      </PolicyPage>
+      <AppFooter />
+    </Page.Page>
   );
-}
+};
+
+const PolicyPage = styled(Page.Screen)`
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+
+  @media only screen and (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    & {
+      font-size: 13px;
+    }
+    img {
+      object-fit: cover;
+      max-height: 100px;
+      max-width: 100px;
+    }
+  }
+`;
+
+export default Policy;
